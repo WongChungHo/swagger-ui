@@ -19,7 +19,11 @@ import static springfox.documentation.builders.PathSelectors.regex;
 public class SwaggerConfiguration {
 
     private ApiInfo apiInfo() {
-        return new ApiInfo("My REST API", "Some custom description of API.", "API TOS", "Terms of service",
+        return
+                new ApiInfo("My REST API",
+                        "Some custom description of API.",
+                        "API TOS",
+                        "Terms of service",
           new Contact("General UserName", "www.baeldung.com", "user-name@gmail.com"),
           "License of API", "API license URL", Collections.emptyList());
     }
@@ -32,6 +36,17 @@ public class SwaggerConfiguration {
           .apis(RequestHandlerSelectors.withClassAnnotation(RestController.class))
           .paths(regex("/good-path/.*"))
           .build();
+    }
+
+    @Bean
+    public Docket api2() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .groupName("accounting")
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("com.baeldung.swaggerconf.controller"))
+                .apis(RequestHandlerSelectors.withClassAnnotation(RestController.class))
+                .paths(regex("/good-path/.*"))
+                .build();
     }
 
 }

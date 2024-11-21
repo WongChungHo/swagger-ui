@@ -16,7 +16,7 @@ import org.springframework.test.web.servlet.ResultActions;
 
 @AutoConfigureMockMvc
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@Disabled("springfox-boot-starter is not maintained anymore. Use spring-doc")
+//@Disabled("springfox-boot-starter is not maintained anymore. Use spring-doc")
 class SwaggerConfExcludeErrorControllerIntegrationTest {
 
     @Autowired
