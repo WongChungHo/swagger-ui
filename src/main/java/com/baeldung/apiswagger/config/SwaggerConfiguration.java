@@ -33,6 +33,7 @@ public class SwaggerConfiguration {
                         typeResolver.resolve(GetHistoryLogSuccessResponseDetail.class),
                         typeResolver.resolve(ErrorResponse.class)
                 )
+                .groupName("1wqewq2132121321")
           .select()
 //          .apis(RequestHandlerSelectors.any())
 //          .paths(PathSelectors.any())
@@ -50,6 +51,7 @@ public class SwaggerConfiguration {
                         typeResolver.resolve(GetHistoryLogSuccessResponseDetail.class),
                         typeResolver.resolve(ErrorResponse.class)
                 )
+                .groupName("1wqewq21321")
                 .select()
 //          .apis(RequestHandlerSelectors.any())
 //          .paths(PathSelectors.any())
