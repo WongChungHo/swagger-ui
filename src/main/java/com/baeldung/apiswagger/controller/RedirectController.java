@@ -20,9 +20,7 @@ public class RedirectController {
 //    Void updateActionItem(HttpServletRequest request) throws Exception {
 //        HttpServletRequest.sendRedirect("https://twitter.com");
 //    }
-    @RequestMapping(
-            value = "/",
-            method = RequestMethod.GET)
+    @RequestMapping("/")
     public void redirectToTwitter(HttpServletResponse httpServletResponse) throws IOException {
         httpServletResponse.sendRedirect("/swagger-ui/");
     }
